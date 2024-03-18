@@ -25,4 +25,4 @@ jobs:
           context: .
           file: Dockerfile
           push: true
-          tags: klausur:latest
+          tags: ghcr.io/ci-cd-2024-dhbw-hdh/sandesh.dulal:latest
