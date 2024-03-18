@@ -46,8 +46,15 @@ npm run dev
 4. Definiere alle nötigen Manifeste um das erstellte Image auf einem Kubernetes Cluster zu deployen **(5 Punkte)**
 5. Erkläre in eigenen Worten:
    * Welche Vorteile ein Kubernetes Deployment gegenüber einem Kubernetes Pod hat **(2 Punkte)**
+   * Mit Deployment kann man die Anzahl der Replicas ändern.
+   * Deployment überwachen den Status Ihrer Pods und ersetzen Pods, die nicht den Healthchecks failen.
    * Wofür ein Kubernetes Service gut ist **(2 Punkte)**
+   * Routing
+   * Lastverteilung
    * Mehrere Wege wie man eine Kubernetes Anwendung von außen erreichen kann **(3 Punkte)**
+   * Von Reverse Proxy
+   * Ingress
+   * Node:Nodeport
 
 ## Zusatzaufgabe:
 
