@@ -54,7 +54,7 @@ npm run dev
    * Mehrere Wege wie man eine Kubernetes Anwendung von außen erreichen kann **(3 Punkte)**
    * Von Reverse Proxy
    * Ingress
-   * Node:Nodeport
+   * NodeIP:Nodeport (nodeport gesetzt in service)
 
 ## Zusatzaufgabe:
 
