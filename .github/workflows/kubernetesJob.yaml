@@ -34,7 +34,7 @@ jobs:
       - name: Set imagePullSecret
         uses: azure/k8s-create-secret@v4
         with:
-          namespace: 'sandesh.dulal'
+          namespace: 'sandesh-dulal'
           secret-name: 'regcred'
           container-registry-url: 'ghcr'
           container-registry-username: ${{ github.actor }}
