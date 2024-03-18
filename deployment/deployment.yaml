@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kl-deployment
+  labels:
+    app: kl-todo
+  namespace: sandesh-dulal
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: kl-todo
+  template:
+    metadata:
+      labels:
+        app: kl-todo
+    spec:
+      containers:
+        - name: kl-todo
+          image: ghcr.io/ci-cd-2024-dhbw-hdh/sandesh.dulal:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+              protocol: TCP
+          resources: {}
+      dnsPolicy: ClusterFirst
+      imagePullSecrets:
+        - name: mysecret
+      restartPolicy: Always
+      securityContext: {}

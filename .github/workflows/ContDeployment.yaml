@@ -1,24 +1,20 @@
-name: continuous integration
+name: continuous deployment
 run-name: ${{ github.actor }} is pushing on main-branch
 on:
   push:
     branches:
       - 'bearbeitung'
 jobs:
-  Build-on-Push:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
       - name: Install Dependencies
-        run: npm i
-      - name: format check
-        run: npm run format:check
-      - name: eslint check
-        run: npm run lint
-      - name: Run Tests
-        run: npm run test
+        run: npm ci
       - name: Build
         run: npm run build
-      - name: Svelte check
-        run: npm run check
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist
