@@ -1,0 +1,29 @@
+# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be
+# reopened with the relevant failures.
+#
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: my-svc
+  name: my-svc
+  namespace: sandesh-dulal
+spec:
+  externalTrafficPolicy: Cluster
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+    - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+    - name: 8080-80
+      nodePort: 32124
+      port: 8080
+      protocol: TCP
+      targetPort: 80
+  selector:
+    app: my-deployment
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}
