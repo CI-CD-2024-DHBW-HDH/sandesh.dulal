@@ -59,3 +59,6 @@ npm run dev
 ## Zusatzaufgabe:
 
 Definiere einen Kubernetes Job **(2 Punkte)**
+
+Ein Job erstellt einen oder mehrere Pods und wird die Ausführung der Pods so 
+lange wiederholen, bis eine spezifizierte Anzahl von ihnen erfolgreich beendet wurde
