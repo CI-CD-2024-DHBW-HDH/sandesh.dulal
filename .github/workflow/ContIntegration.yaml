@@ -1,6 +1,9 @@
 name: continuous integration
 run-name: ${{ github.actor }} is pushing on main-branch
-on: [push]
+on:
+  push:
+    branches:
+      - 'bearbeitung'
 jobs:
   Build-on-Push:
     runs-on: ubuntu-latest
